@@ -91,12 +91,13 @@ ul {
     align-items: center;
 
     background-image: url("../img/developer.png");
-    background-size: 30% auto;
+    background-size: 37% auto;
     background-repeat: no-repeat;
     background-position: center bottom;
 
-    padding: 10vh 10vw 50vh 10vw;
+    padding: 10vh 10vw 65vh 10vw;
     gap: 20px;
+    margin-bottom: 80px;
 }
 
 .home__title {
@@ -116,7 +117,7 @@ ul {
 }
 
 .about {
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .about__title {
@@ -157,7 +158,7 @@ ul {
 }
 
 .skills {
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   gap: 80px;
@@ -259,7 +260,7 @@ ul {
 }
 
 .feedback {
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   gap: 80px;
