@@ -227,11 +227,13 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  scroll-margin-top: 80px;
   gap: 30px;
 }
 
 .project__close {
     display: block;
+    width: fit-content;
     margin-left: auto;
     margin-bottom: 15px;
     padding: 9px 14px;
@@ -241,8 +243,13 @@ ul {
     color: #291358;
     font-size: 20px;
     font-weight: bold;
+    text-decoration: none;
     cursor: pointer;
     transition: background-color 0.2s ease;
+}
+
+.project__close:hover {
+    background-color: #6a5489;
 }
 
 .project__close:hover {

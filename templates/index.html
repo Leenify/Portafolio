@@ -54,7 +54,7 @@
       <!-- Sección de competencias -->
       <section class="main__skills skills" id="skills">
         <h2 class="skills__title">MIS HABILIDADES</h2>
-        <form action="/python" method="POST">
+        <form action="/python#project-python" method="POST">
           <ul class="skills__list skills-list">
             <li class="skills-list__skill skill">
               <img
@@ -71,7 +71,7 @@
               <input class="skill__button" type="submit" name="button_python" value="VER PROYECTO">
             </li>
         </form>
-        <form action="/discord" method="POST">
+        <form action="/discord#project-discord" method="POST">
             <li class="skills-list__skill skill">
               <img
                 class="skill__img"
@@ -87,7 +87,7 @@
               <input class="skill__button" type="submit" name="button_discord" value="VER PROYECTO">
             </li>
         </form>
-        <form action="/html" method="POST">
+        <form action="/html#project-html" method="POST">
             <li class="skills-list__skill skill">
               <img
                 class="skill__img"
@@ -103,7 +103,7 @@
               <input class="skill__button" type="submit" name="button_html" value="VER PROYECTO">
             </li>
         </form>
-        <form action="/db" method="POST">
+        <form action="/db#project-db" method="POST">
             <li class="skills-list__skill skill">
               <img
                 class="skill__img"
@@ -122,28 +122,28 @@
         </form>
         {% if button_python%}
           <div class="skills__project project" id="project-python">
-              <button type="button" class="project__close" onclick="cerrarProyecto('project-python')" aria-label="Cerrar proyecto">X</button>
+              <a class="project__close" href="/#skills" aria-label="Cerrar proyecto">X</a>
               <img class="project__img" src="../static/img/python-project.png" alt="project" width="500">
               <a class="project__link" href="https://github.com/Leenify/Jinja2/tree/master" target="_blank" rel="noopener noreferrer">Abrir en GitHub</a>
           </div>
         {% endif %}
         {% if button_discord%}
           <div class="skills__project project" id="project-discord">
-              <button type="button" class="project__close" onclick="cerrarProyecto('project-discord')" aria-label="Cerrar proyecto">X</button>
-              <img class="project__img" src="../static/img/profile.png" alt="project" width="500">
+              <a class="project__close" href="/#skills" aria-label="Cerrar proyecto">X</a>
+              <img class="project__img" src="../static/img/discord-project.png" alt="project" width="500">
               <a class="project__link" href="https://github.com/Leenify/Bot_discord" target="_blank" rel="noopener noreferrer">Abrir en GitHub</a>
           </div>
         {% endif %}
         {% if button_html%}
           <div class="skills__project project" id="project-html">
-              <button type="button" class="project__close" onclick="cerrarProyecto('project-html')" aria-label="Cerrar proyecto">X</button>
+              <a class="project__close" href="/#skills" aria-label="Cerrar proyecto">X</a>
               <img class="project__img" src="../static/img/developer.png" alt="project" width="500">
               <a class="project__link" href="https://github.com/Leenify/Clon-de-repositorio" target="_blank" rel="noopener noreferrer">Abrir en GitHub</a>
           </div>
         {% endif %}
         {% if button_db%}
           <div class="skills__project project" id="project-db">
-              <button type="button" class="project__close" onclick="cerrarProyecto('project-db')" aria-label="Cerrar proyecto">X</button>
+              <a class="project__close" href="/#skills" aria-label="Cerrar proyecto">X</a>
               <img class="project__img" src="../static/img/python-project.png" alt="project" width="500">
               <a class="project__link" href="https://github.com/Leenify/diary-en" target="_blank" rel="noopener noreferrer">Abrir en GitHub</a>
           </div>
@@ -152,12 +152,12 @@
       <!-- Formulario de contacto -->
       <section class="main__feedback feedback" id="feedback">
         <h2 class="feedback__title">FEEDBACK</h2>
-        <form action="" method="POST" class="feedback__form form">
+        <form action="/feedback" method="POST" class="feedback__form form">
           <label for="email">
             <input type="email" class="form__input" name="email" id="email" placeholder="E-mail" required>
           </label>
-          <label for="text">
-            <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="Comment"></textarea>
+          <label for="comment">
+            <textarea name="comment" class="form__input" id="comment" cols="70" rows="10" required placeholder="Deja tu comentario aquí"></textarea>
           </label>
           <button class="form__button" type="submit">ENVIAR</button>
         </form>

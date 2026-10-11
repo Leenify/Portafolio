@@ -10,6 +10,14 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # Creando la DB
 db = SQLAlchemy(app)
 
+class Feedback(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(100), nullable=False)
+    comment = db.Column(db.String(500), nullable=False)
+
+    def __repr__(self):
+        return f'<Feedback {self.email}>'
+
 # Página de contenidos en ejecución
 @app.route('/')
 def index():
@@ -40,16 +48,19 @@ def pf():
 @app.route('/feedback', methods=['POST'])
 def process_feedback():
     email = request.form.get('email')
-    comment = request.form.get('text')
-    return render_template('index.html', email=email, comment=comment)
+    comment = request.form.get('comment')
 
-class Card(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(100), nullable=False)
-    description = db.Column(db.String(200), nullable=False)
+    if email and comment:
+        feedback = Feedback(email=email, comment=comment)
+        db.session.add(feedback)
+        db.session.commit()
+        return redirect('/')
+    else:
+        return "Por favor, completa todos los campos del formulario."
 
-    def __repr__(self):
-        return f'<Card {self.title}>'
 
 if __name__ == "__main__":
+    with app.app_context():
+        db.create_all()
+
     app.run(debug=True)
