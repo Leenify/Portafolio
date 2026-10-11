@@ -361,3 +361,55 @@ ul {
   border: none;
   cursor: pointer;
 }
+
+.footer {
+    margin-top: 60px;
+    padding: 30px 20px;
+    background-color: #605078;
+    color: #E9DDFB;
+    text-align: center;
+}
+
+.footer__title {
+    margin: 0 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.footer__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.footer__link {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 10px;
+    background-color: #51406B;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.footer__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer__link i {
+    font-size: 20px;
+}
+
+.footer__copy {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+}

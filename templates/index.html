@@ -7,6 +7,7 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="../static/css/style.css" />
     <title>Portafolio</title>
   </head>
@@ -137,14 +138,14 @@
         {% if button_html%}
           <div class="skills__project project" id="project-html">
               <a class="project__close" href="/#skills" aria-label="Cerrar proyecto">X</a>
-              <img class="project__img" src="../static/img/developer.png" alt="project" width="500">
+              <img class="project__img" src="../static/img/html-project.png" alt="project" width="500">
               <a class="project__link" href="https://github.com/Leenify/Clon-de-repositorio" target="_blank" rel="noopener noreferrer">Abrir en GitHub</a>
           </div>
         {% endif %}
         {% if button_db%}
           <div class="skills__project project" id="project-db">
               <a class="project__close" href="/#skills" aria-label="Cerrar proyecto">X</a>
-              <img class="project__img" src="../static/img/python-project.png" alt="project" width="500">
+              <img class="project__img" src="../static/img/db-project.png" alt="project" width="500">
               <a class="project__link" href="https://github.com/Leenify/diary-en" target="_blank" rel="noopener noreferrer">Abrir en GitHub</a>
           </div>
         {% endif %}
@@ -164,8 +165,31 @@
       </section>
     </main>
     <!-- Pie de página con enlaces a redes sociales -->
-    <footer>
-
+    <footer class="footer">
+      <p class="footer__title">CONTACTO Y REDES</p>
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a class="footer__link" href="https://github.com/Leenify" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="https://www.instagram.com/dan.kam_69" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram"></i> Instagram
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="https://www.linkedin.com/in/dana-karime-conde-cruz-284b2041b" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__link" href="https://mail.google.com/mail/?view=cm&to=nanisk69@gmail.com" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-envelope"></i> Correo
+          </a>
+        </li>
+      </ul>
+      <p class="footer__copy">© 2026 Dana Karime Conde Cruz. Todos los derechos reservados.</p>
     </footer>
   </body>
 </html>
