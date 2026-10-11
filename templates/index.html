@@ -54,7 +54,7 @@
       <!-- Sección de competencias -->
       <section class="main__skills skills" id="skills">
         <h2 class="skills__title">MIS HABILIDADES</h2>
-        <form action="/" method="POST">
+        <form action="/python" method="POST">
           <ul class="skills__list skills-list">
             <li class="skills-list__skill skill">
               <img
@@ -70,6 +70,8 @@
               </span>
               <input class="skill__button" type="submit" name="button_python" value="VER PROYECTO">
             </li>
+        </form>
+        <form action="/discord" method="POST">
             <li class="skills-list__skill skill">
               <img
                 class="skill__img"
@@ -84,6 +86,8 @@
               </span>
               <input class="skill__button" type="submit" name="button_discord" value="VER PROYECTO">
             </li>
+        </form>
+        <form action="/html" method="POST">
             <li class="skills-list__skill skill">
               <img
                 class="skill__img"
@@ -98,6 +102,8 @@
               </span>
               <input class="skill__button" type="submit" name="button_html" value="VER PROYECTO">
             </li>
+        </form>
+        <form action="/db" method="POST">
             <li class="skills-list__skill skill">
               <img
                 class="skill__img"
@@ -106,15 +112,40 @@
                 width="150"
                 height="150"
               />
-              <span class="skill__info">Skill info</span>
+              <span class="skill__info">
+                Creación y manejo de bases de datos, almacenamiento de información 
+                y conexión con aplicaciones web.
+              </span>
               <input class="skill__button" type="submit" name="button_db" value="VER PROYECTO">
             </li>
           </ul>
         </form>
         {% if button_python%}
-          <div class="skills__project project" id="project">
+          <div class="skills__project project" id="project-python">
+              <button type="button" class="project__close" onclick="cerrarProyecto('project-python')" aria-label="Cerrar proyecto">X</button>
               <img class="project__img" src="../static/img/python-project.png" alt="project" width="500">
-              <a class="project__link" href="">Abrir en GitHub</a>
+              <a class="project__link" href="https://github.com/Leenify/Jinja2/tree/master" target="_blank" rel="noopener noreferrer">Abrir en GitHub</a>
+          </div>
+        {% endif %}
+        {% if button_discord%}
+          <div class="skills__project project" id="project-discord">
+              <button type="button" class="project__close" onclick="cerrarProyecto('project-discord')" aria-label="Cerrar proyecto">X</button>
+              <img class="project__img" src="../static/img/profile.png" alt="project" width="500">
+              <a class="project__link" href="https://github.com/Leenify/Bot_discord" target="_blank" rel="noopener noreferrer">Abrir en GitHub</a>
+          </div>
+        {% endif %}
+        {% if button_html%}
+          <div class="skills__project project" id="project-html">
+              <button type="button" class="project__close" onclick="cerrarProyecto('project-html')" aria-label="Cerrar proyecto">X</button>
+              <img class="project__img" src="../static/img/developer.png" alt="project" width="500">
+              <a class="project__link" href="https://github.com/Leenify/Clon-de-repositorio" target="_blank" rel="noopener noreferrer">Abrir en GitHub</a>
+          </div>
+        {% endif %}
+        {% if button_db%}
+          <div class="skills__project project" id="project-db">
+              <button type="button" class="project__close" onclick="cerrarProyecto('project-db')" aria-label="Cerrar proyecto">X</button>
+              <img class="project__img" src="../static/img/python-project.png" alt="project" width="500">
+              <a class="project__link" href="https://github.com/Leenify/diary-en" target="_blank" rel="noopener noreferrer">Abrir en GitHub</a>
           </div>
         {% endif %}
       </section>
